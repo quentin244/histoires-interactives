@@ -1,0 +1,204 @@
+<histoire titre="Mad Maxi-Jack">
+	<vignette id="0"> <!--page 1-->
+		<image src="img/0.jpg"/>
+		<texte>Maxi-Jack coule des jours heureux une fois de plus, mais une soudaine intuition le pousse à penser qu'il ne profitera pas de ces moments bénis trop longtemps.</texte>
+	</vignette>
+	<vignette id="1">
+		<image src="img/1.jpg"/>
+		<texte>Car, suite à une négligence humaine, la planète subit des dommages irréversibles au niveau écologique et en terme d'organisation de la société également.</texte>
+	</vignette>
+	<vignette id="2">
+		<image src="img/2.jpg"/>
+		<texte>Bref go Mad Maxi-Jack ! Bats-toi pour ta survie !</texte>
+	</vignette>
+	<vignette id="3"> <!--page 2-->
+		<image src="img/3.jpg"/>
+		<texte>Bon, vous vous doutez du topo... Grands espaces dévastés, bandes de psychopathes lourdement armés tyrannisant de pauvres villageois, créatures mutantes et tout le tintouin. Tout cela associé à une toute nouvelle charte graphique.</texte>
+	</vignette>
+	<vignette id="4">
+		<image src="img/4.jpg"/>
+		<texte>Il est à noter que la peau de Maxi-Jack s'est légèrement teintée de rose. Cela est dû à l'explosion nucléaire dont l'épicentre était située à 500 mètres de lui.</texte>
+	</vignette>
+	<vignette id="5">
+		<image src="img/5.jpg"/>
+		<texte>Bon, Mad Maxi-Jack a la dalle, il n'a rien bouffé depuis trois semaines. Que faire ?</texte>
+		<choix>
+			<proposition ref="6">- Manger l'espèce de boue jaune devant</proposition>
+			<proposition ref="9">- Rogner l'écorce de l'arbre</proposition>
+			<proposition ref="12">- Fouiller ses poches</proposition>
+		</choix>
+	</vignette>
+	<vignette id="6"> <!--page 3-->
+		<image src="img/6.jpg"/>
+		<texte>Cette boue semble succulente. Mad Maxi la consomme et est immédiatement rassasié.</texte>
+	</vignette>
+	<vignette id="7">
+		<image src="img/7.jpg"/>
+		<texte>Quelle aubaine ! Il y en a pour des semaines de provisions !</texte>
+	</vignette>
+	<vignette id="8">
+		<image src="img/8.jpg"/>
+		<texte>Que faire de ce trésor ?</texte>
+		<choix>
+			<proposition ref="15">- Installer son campement à proximité</proposition>
+			<proposition ref="18">- Remplir son sac avec et tracer sa route</proposition>
+			<proposition ref="21">- Se l'étaler sur le corps dans un spasme régressif</proposition>
+		</choix>
+	</vignette>
+	<vignette id="9"> <!--page 4-->
+		<image src="img/9.jpg"/>
+		<texte>Qui renierait à rogner l'écorce d'un arbre radioactif après un jeûne forcé de trois semaines ? Certainement pas notre héros pour qui la survie est désormais élevée au rang d'art de vivre.</texte>
+	</vignette>
+	<vignette id="10">
+		<image src="img/10.jpg"/>
+		<texte>En ces temps troublés rien ne se perd... Après avoir rogné l'arbre Mad Maxi-Jack se rend compte qu'il pourrait tirer avantage de la situation en se taillant un arc et des flèches avec les restes de l'arbre.</texte>
+	</vignette>
+	<vignette id="11">
+		<image src="img/11.jpg"/>
+		<texte>Ceci fait, il part en quête d'un gibier...</texte>
+		<choix>
+			<proposition ref="24">- Ho ! Un rat !</proposition>
+			<proposition ref="27">- Ho ! Un être humain plus affaibli que lui !</proposition>
+			<proposition ref="30">- Hé ! Des traces de véhicules !</proposition>
+		</choix>
+	</vignette>
+	<vignette id="12"> <!--page 5-->
+		<image src="img/12.jpg"/>
+		<texte>Mouais... Mad Maxi fouille ses poches, mais bon évidemment y'a que dalle.</texte>
+	</vignette>
+	<vignette id="13">
+		<image src="img/13.jpg"/>
+		<texte>Là c'est chaud, il a vraiment la dalle... Quatre semaines sans bouffer.</texte>
+	</vignette>
+	<vignette id="14">
+		<image src="img/14.jpg"/>
+		<texte>Au bout de cinq semaines, c'est un vrai squelette sur pattes, il a abandonné son équipement qu'il n'avait plus la force de porter. C'est alors qu'il perçoit un campement. Que faire ?</texte>
+		<choix>
+			<proposition ref="33">- Rester éligné, il n'a plus la force de se défendre, autant chercher quelques restes autour du campement</proposition>
+			<proposition ref="36">- Il n'a plus rien à perdre, il y va !</proposition>
+		</choix>
+	</vignette>
+	<vignette id="15"> <!--page 6-->
+		<image src="img/15.jpg"/>
+		<texte>A quoi bon se faire chier à trimballer de la bouffe quand on a déjà tout sur place ? En ces temps troublés la logique et la survie se sont fondues en un seul et même concept.</texte>
+	</vignette>
+	<vignette id="16">
+		<image src="img/16.jpg"/>
+		<texte>Mad Maxi installe donc son campement à côté de cette source de nourriture.</texte>
+	</vignette>
+	<vignette id="17" fin="true">
+		<image src="img/17.jpg"/>
+		<texte>Mais un groupe de Punks désoeuvrés le repère et lui fait la peau. Dans un monde post-apocalyptique les sédentaires sont des proies faciles Mad Maxi-Jack, tu l'a appris à tes dépends. Mais tu es mort, tu ne pourras donc pas mettre en pratique le fruit de cet apprentissage.</texte>
+	</vignette>
+	<vignette id="18"> <!--page 7-->
+		<image src="img/18.jpg"/>
+		<texte>Mad Maxi-Jack dispose d'un petit sac en peau de rat qu'il rempli de cette boue nutritive, puis il avance dièrement vers sa destinée.</texte>
+	</vignette>
+	<vignette id="19">
+		<image src="img/19.jpg"/>
+		<texte>Il se trouve rapidement face à un trou de ver des sables géant. Plusieurs possibilités s'offrent à lui.</texte>
+	</vignette>
+	<vignette id="20">
+		<image src="img/20.jpg"/>
+		<choix>
+			<proposition ref="39">- Fuir ! On ne badine pas avec ces créatures !</proposition>
+			<proposition ref="39">- Appâter l'animal avec de la boue</proposition>
+		</choix>
+	</vignette>
+	<vignette id="21"> <!--page 8-->
+		<image src="img/21.jpg"/>
+		<texte>Cette boue évoque à Mad Maxi-Jack de lointains souvenirs liés à sa mère et aux premiers instants des cellules aquatiques dont il est issu.</texte>
+	</vignette>
+	<vignette id="22">
+		<image src="img/22.jpg"/>
+		<texte>Il se l'étale donc cur le corps en émettant un râle bovin.</texte>
+	</vignette>
+	<vignette id="23">
+		<image src="img/23.jpg"/>
+		<texte>Une meute de scorpion apparaît mais Max Maxi-Jack est camouflé par la boue. Il va attendre que ces dangereuses bestioles passent leur chemin. Mais que fera-t-il ensuite ?</texte>
+		<choix>
+			<proposition ref="39">- Il attaque une bestiole affaiblie du troupeau</proposition>
+			<proposition ref="39">- Il creuse un trou et fait un somme</proposition>
+			<proposition ref="39">- Il trace sa route</proposition>
+		</choix>
+	</vignette>
+	<vignette id="24"> <!--page 9-->
+		<image src="img/24.jpg"/>
+		<texte>L'arc bandé au maximum de ses possibilités, les muscles saillants, l'oeil aux aguets, Mad Maxi-Jack ajuste sa cible... Les chances de survie du mustellidé sont à cet instant évaluées à 0,7%.</texte>
+	</vignette>
+	<vignette id="25">
+		<image src="img/25.jpg"/>
+		<texte>Mais la flèche rate sa cible. Le rat est allé chercher de l'aide auprès de son supérieur hiérarchique... Les choses se compliquent.</texte>
+	</vignette>
+	<vignette id="26">
+		<image src="img/26.jpg"/>
+		<texte>Un combat s'enage...</texte>
+		<choix>
+			<proposition ref="39">- Flèche à bout portant</proposition>
+			<proposition ref="39">- Châtrer avec les dents</proposition>
+			<proposition ref="39">- Sable dans les yeux</proposition>
+		</choix>
+	</vignette>
+	<vignette id="27"> <!--page 10-->
+		<image src="img/27.jpg"/>
+		<texte>Un vieillard en difficulté se tient au milieu du chemin. Une proie facile qui transporte peut-être quelques objets de valeur, se dit Mad Maxi-Jack.</texte>
+	</vignette>
+	<vignette id="28">
+		<image src="img/28.jpg"/>
+		<texte>En s'approchant, Mad Maxi s'étonne de la posture statique du vieil homme. Arrivé auprès de lui, il découvre avec stupeur qu'il s'agit d'un simple leurre en carton.</texte>
+	</vignette>
+	<vignette id="29">
+		<image src="img/29.jpg"/>
+		<texte>Une lourde pierre l'atteint au crâne... Il s'écroule. Il est ensuite emasculé et enterré jusqu'au cou dans une carrière de sel par des mutants. Que faire ?</texte>
+		<choix>
+			<proposition ref="39">- Attendre</proposition>
+			<proposition ref="39">- Attenre un peu moins et faire un truc de fou !</proposition>
+		</choix>
+	</vignette>
+	<vignette id="30"> <!--page 11-->
+		<image src="img/30.jpg"/>
+		<texte>Mad Maxi-Jack suit les traces du véhicule. Mais au bout d'un moment, il se rend compte qu'il s'enfonce dans des sables mouvants.</texte>
+	</vignette>
+	<vignette id="31">
+		<image src="img/31.jpg"/>
+		<texte>Au prix d'efforts surhumains, il s'extirpe du bourbien, mais il a perdu son arc et ses flèches et avalé du sable. Il s'aperçoit bien vite que cette boue stagnante lui a refourgué lui a refourgué la dysenterie.</texte>
+	</vignette>
+	<vignette id="32">
+		<image src="img/32.jpg"/>
+		<texte>Mad Maxi-Jack en chie, c'est le cas de le dire... Affaibli et démoralisé, il aperçoit un campement vers lequel mènent les traces de véhicule.</texte>
+		<choix>
+			<proposition ref="33">- Notre héros n'a pas perdu ses réflexes de survie élémentaire, il reste éloigné et cherche des restes de riz et de smecta à proximité</proposition>
+			<proposition ref="36">- Rien à perdre, il rentre dans le camp</proposition>
+		</choix>
+	</vignette>
+	<vignette id="33"> <!--page 12-->
+		<image src="img/33.jpg"/>
+		<texte>Mad Maxi-Jack n'est plus que l'ombre de lui-même, notre héros intrépide doit maintenant pour assurer sa survie, fureter autour d'un campement de gros nazes pour trouver quelques hypothétiques aliments et médocs, tout en évitant soigneusement les punks en meilleur condition physique que lui.</texte>
+	</vignette>
+	<vignette id="34">
+		<image src="img/34.jpg"/>
+		<texte>La nuit, il se cache à l'écart, mais ne pouvant allumer de feu sous peine d'être découvert, et les nuits étant particulièrement glaciales, il tombe malade gravement et meurt comme une merde sans combattre.</texte>
+	</vignette>
+	<vignette id="35" fin="true">
+		<image src="img/35.jpg"/>
+		<texte>Les punks découvrent sa dépouille qui leur sert de trophée de guerre. Triste fin.</texte>
+	</vignette>
+	<vignette id="36"> <!--page 13-->
+		<image src="img/36.jpg"/>
+		<texte>Mettant ses angoisses et son égo de côté, notre héros se dirige vers un garde du campement afin d'expliquer sa situation et de plaider sa cause.</texte>
+	</vignette>
+	<vignette id="37">
+		<image src="img/37.jpg"/>
+		<texte>Il est immédiatement jeté dans un cachot... En fait un trou dans la sol, couvert d'une tôle. L'après-midi risque d'être chaud si il reste là-dedans.</texte>
+	</vignette>
+	<vignette id="38">
+		<image src="img/38.jpg"/>
+		<texte>Du bruit, on arrive ! Le garde à sans doute prévenu son supérieur... Qu'allez-vous lui proposer ? </texte>
+		<choix>
+			<proposition ref="39">- Entretenir les véhicules et les armes contre un peu de nourriture et d'eau</proposition>
+		</choix>
+	</vignette>
+	<vignette id="39">
+		<texte>The End~</texte>
+	</vignette>
+</histoire>

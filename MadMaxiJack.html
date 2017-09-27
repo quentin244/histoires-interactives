@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mad Maxi Jack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
 <div titre="Mad Maxi-Jack">
 	<div id="0"> <!--page 1-->
 		<img src="img/0.png"/>
@@ -22,11 +31,11 @@
 	<div id="5">
 		<img src="img/5.png"/>
 		<p>Bon, Mad Maxi-Jack a la dalle, il n'a rien bouffé depuis trois semaines. Que faire ?</p>
-		<ul>
-			<li ref="6">- Manger l'espèce de boue jaune devant</li>
-			<li ref="9">- Rogner l'écorce de l'arbre</li>
-			<li ref="12">- Fouiller ses poches</li>
-		</ul>
+		<choix>
+			<proposition ref="6">- Manger l'espèce de boue jaune devant</proposition>
+			<proposition ref="9">- Rogner l'écorce de l'arbre</proposition>
+			<proposition ref="12">- Fouiller ses poches</proposition>
+		</choix>
 	</div>
 	<div id="6"> <!--page 3-->
 		<img src="img/6.png"/>
@@ -39,11 +48,11 @@
 	<div id="8">
 		<img src="img/8.png"/>
 		<p>Que faire de ce trésor ?</p>
-		<ul>
-			<li ref="15">- Installer son campement à proximité</li>
-			<li ref="18">- Remplir son sac avec et tracer sa route</li>
-			<li ref="21">- Se l'étaler sur le corps dans un spasme régressif</li>
-		</ul>
+		<choix>
+			<proposition ref="15">- Installer son campement à proximité</proposition>
+			<proposition ref="18">- Remplir son sac avec et tracer sa route</proposition>
+			<proposition ref="21">- Se l'étaler sur le corps dans un spasme régressif</proposition>
+		</choix>
 	</div>
 	<div id="9"> <!--page 4-->
 		<img src="img/9.png"/>
@@ -56,11 +65,11 @@
 	<div id="11">
 		<img src="img/11.png"/>
 		<p>Ceci fait, il part en quête d'un gibier...</p>
-		<ul>
-			<li ref="24">- Ho ! Un rat !</li>
-			<li ref="27">- Ho ! Un être humain plus affaibli que lui !</li>
-			<li ref="30">- Hé ! Des traces de véhicules !</li>
-		</ul>
+		<choix>
+			<proposition ref="24">- Ho ! Un rat !</proposition>
+			<proposition ref="27">- Ho ! Un être humain plus affaibli que lui !</proposition>
+			<proposition ref="30">- Hé ! Des traces de véhicules !</proposition>
+		</choix>
 	</div>
 	<div id="12"> <!--page 5-->
 		<img src="img/12.png"/>
@@ -73,10 +82,10 @@
 	<div id="14">
 		<img src="img/14.png"/>
 		<p>Au bout de cinq semaines, c'est un vrai squelette sur pattes, il a abandonné son équipement qu'il n'avait plus la force de porter. C'est alors qu'il perçoit un campement. Que faire ?</p>
-		<ul>
-			<li ref="33">- Rester éligné, il n'a plus la force de se défendre, autant chercher quelques restes autour du campement</li>
-			<li ref="36">- Il n'a plus rien à perdre, il y va !</li>
-		</ul>
+		<choix>
+			<proposition ref="33">- Rester éligné, il n'a plus la force de se défendre, autant chercher quelques restes autour du campement</proposition>
+			<proposition ref="36">- Il n'a plus rien à perdre, il y va !</proposition>
+		</choix>
 	</div>
 	<div id="15"> <!--page 6-->
 		<img src="img/15.png"/>
@@ -100,10 +109,10 @@
 	</div>
 	<div id="20">
 		<img src="img/20.png"/>
-		<ul>
-			<li ref="39">- Fuir ! On ne badine pas avec ces créatures !</li>
-			<li ref="39">- Appâter l'animal avec de la boue</li>
-		</ul>
+		<choix>
+			<proposition ref="39">- Fuir ! On ne badine pas avec ces créatures !</proposition>
+			<proposition ref="39">- Appâter l'animal avec de la boue</proposition>
+		</choix>
 	</div>
 	<div id="21"> <!--page 8-->
 		<img src="img/21.png"/>
@@ -116,11 +125,11 @@
 	<div id="23">
 		<img src="img/23.png"/>
 		<p>Une meute de scorpion apparaît mais Max Maxi-Jack est camouflé par la boue. Il va attendre que ces dangereuses bestioles passent leur chemin. Mais que fera-t-il ensuite ?</p>
-		<ul>
-			<li ref="39">- Il attaque une bestiole affaiblie du troupeau</li>
-			<li ref="39">- Il creuse un trou et fait un somme</li>
-			<li ref="39">- Il trace sa route</li>
-		</ul>
+		<choix>
+			<proposition ref="39">- Il attaque une bestiole affaiblie du troupeau</proposition>
+			<proposition ref="39">- Il creuse un trou et fait un somme</proposition>
+			<proposition ref="39">- Il trace sa route</proposition>
+		</choix>
 	</div>
 	<div id="24"> <!--page 9-->
 		<img src="img/24.png"/>
@@ -133,11 +142,11 @@
 	<div id="26">
 		<img src="img/26.png"/>
 		<p>Un combat s'enage...</p>
-		<ul>
-			<li ref="39">- Flèche à bout portant</li>
-			<li ref="39">- Châtrer avec les dents</li>
-			<li ref="39">- Sable dans les yeux</li>
-		</ul>
+		<choix>
+			<proposition ref="39">- Flèche à bout portant</proposition>
+			<proposition ref="39">- Châtrer avec les dents</proposition>
+			<proposition ref="39">- Sable dans les yeux</proposition>
+		</choix>
 	</div>
 	<div id="27"> <!--page 10-->
 		<img src="img/27.png"/>
@@ -150,10 +159,10 @@
 	<div id="29">
 		<img src="img/29.png"/>
 		<p>Une lourde pierre l'atteint au crâne... Il s'écroule. Il est ensuite emasculé et enterré jusqu'au cou dans une carrière de sel par des mutants. Que faire ?</p>
-		<ul>
-			<li ref="39">- Attendre</li>
-			<li ref="39">- Attenre un peu moins et faire un truc de fou !</li>
-		</ul>
+		<choix>
+			<proposition ref="39">- Attendre</proposition>
+			<proposition ref="39">- Attenre un peu moins et faire un truc de fou !</proposition>
+		</choix>
 	</div>
 	<div id="30"> <!--page 11-->
 		<img src="img/30.png"/>
@@ -166,10 +175,10 @@
 	<div id="32">
 		<img src="img/32.png"/>
 		<p>Mad Maxi-Jack en chie, c'est le cas de le dire... Affaibli et démoralisé, il aperçoit un campement vers lequel mènent les traces de véhicule.</p>
-		<ul>
-			<li ref="33">- Notre héros n'a pas perdu ses réflexes de survie élémentaire, il reste éloigné et cherche des restes de riz et de smecta à proximité</li>
-			<li ref="36">- Rien à perdre, il rentre dans le camp</li>
-		</ul>
+		<choix>
+			<proposition ref="33">- Notre héros n'a pas perdu ses réflexes de survie élémentaire, il reste éloigné et cherche des restes de riz et de smecta à proximité</proposition>
+			<proposition ref="36">- Rien à perdre, il rentre dans le camp</proposition>
+		</choix>
 	</div>
 	<div id="33"> <!--page 12-->
 		<img src="img/33.png"/>
@@ -194,11 +203,14 @@
 	<div id="38">
 		<img src="img/38.png"/>
 		<p>Du bruit, on arrive ! Le garde à sans doute prévenu son supérieur... Qu'allez-vous lui proposer ? </p>
-		<ul>
-			<li ref="39">- Entretenir les véhicules et les armes contre un peu de nourriture et d'eau</li>
-		</ul>
+		<choix>
+			<proposition ref="39">- Entretenir les véhicules et les armes contre un peu de nourriture et d'eau</proposition>
+		</choix>
 	</div>
 	<div id="39">
 		<p>The End~</p>
 	</div>
 </div>
+
+</body>
+</html>

@@ -2,12 +2,35 @@
 	text-align: center;
 	color: #DC143C;
 	text-shadow: 3px 2px black;
+	font-size: 30px;
 }
 
 #Presentation {
-	
-{
+	padding: 10px;
+	font-size: 30px;
+	margin: 30px;
+  	background-color: rgba(255, 255, 255, 0.6);
+  	border: 1px solid black;
+  	/*opacity: 0.6;
+  	filter: alpha(opacity=30);*/
+}
 
-#Histoire {
-	
-{
+a.Histoire:link, a.Histoire:visited {
+	margin: auto;
+	width: 60%;
+	color: #990000;
+	border-style: outset;
+	background-color: yellow;
+    	text-align: center;
+    	display: block;
+	padding: 20px;
+	font-size: 25px;
+	border-radius: 5px;
+}
+
+#Index{
+	background-image: url("fleur.jpg");
+}
+#MadMaxiJack{
+	background-image: url("sable.jpg");
+}

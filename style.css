@@ -36,5 +36,18 @@ a.Histoire:link, a.Histoire:visited {
 }
 
 #contact{
-	display: ;
+	display: none;
+	bottom: 30px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+}
+
+a.Contact {
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
 }

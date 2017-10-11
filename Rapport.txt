@@ -1,0 +1,9 @@
+Projet Web: Histoires interactives
+
+Par Antonin Lagat et Quentin Joubert.
+
+Avant nous avions:
+Créé une page de base et une seconde pour une histoire.
+Pour la page principale un titre...
+Aujourd'hui nous avons:
+

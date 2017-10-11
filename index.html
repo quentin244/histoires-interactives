@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Histoire Interactive</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+<meta charset="utf-8">
+<title>Histoire Interactive</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 <body id="Index">
 
@@ -15,6 +15,37 @@ Ici vous trouverez action, suspens, gloire... mort et désolation.</br>
 Choisissez imédiatement l'un des scénarios ci-dessous et embarquez dans une histoire où chacun de vos choix feront la différence entre une fin heureuse et... une fin tout court.<p></div>
 
 <a class="Histoire" href="MadMaxiJack.html">Mad Maxi-Jack</a>
+
+<a href="javascript:AfficherContact();" >Contactez-Nous</a>
+
+<div id = "contact">
+
+<p>Contacter Nous</p>
+
+<form name="Contact" id="contactForm">
+
+<label>Nom</label>
+<input type="text" placeholder="Nom" id="nom" title = "Nom" required data-validation-required-message="Entrer votre nom.">
+</br>
+<label>Addresse email</label>
+<input type="email" placeholder="Addresse email" id="email" title = "email" required data-validation-required-message="Entrer votre addresse email.">
+</br>
+<label>Numeros Telephone</label>
+<input type="tel" placeholder="Numero Telephone" id="tel" title="tel" required data-validation-required-message="Entrer votre numeros de telephone.">
+</br>
+<label>Message</label>
+<textarea rows="5" placeholder="Message" id="message" title="message" required data-validation-required-message="Entrer un message."></textarea>
+</br>
+<button type="submit" id="envoyer" title = "Envoyer">Envoyer</button>
+</form>
+
+</div>
+
+<script type="text/javascript">
+function AfficherContact(){
+	document.getElementById(contact).style.display = "";
+}
+</script>
 
 </body>
 </html>

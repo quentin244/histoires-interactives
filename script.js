@@ -13,3 +13,23 @@ function CacherContact()
 	lienContact.text = "Contactez-Nous";
 	lienContact.onclick = AfficherContact;
 }
+
+function scene(SceneX){
+	Cacher();
+	Afficher(SceneX);
+}
+
+
+function Cacher()
+{
+	var listScene = document.getElementsByClassName("Scene");
+	for (var i=0; i<listScene.length; i++){
+		listScene[i].style.display = "none";
+	}
+	
+}
+
+function Afficher(SceneX)
+{
+	document.getElementById(String(SceneX)).style.display = "block";
+}

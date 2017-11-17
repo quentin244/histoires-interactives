@@ -15,10 +15,10 @@
   	filter: alpha(opacity=30);*/
 }
 
-a.Histoire:link, a.Histoire:visited {
-	margin: auto;
+a.Histoire, a.Histoire:visited {
+	margin: 10px auto;
 	width: 60%;
-	color: #990000;
+	border-color: #990000;
 	border-style: outset;
 	background-color: yellow;
     	text-align: center;
@@ -26,6 +26,11 @@ a.Histoire:link, a.Histoire:visited {
 	padding: 20px;
 	font-size: 25px;
 	border-radius: 5px;
+	color: green;
+}
+
+a.Histoire:active {
+	color: red;
 }
 
 #Index{
@@ -35,23 +40,39 @@ a.Histoire:link, a.Histoire:visited {
 	background-image: url("sable.jpg");
 }
 
+#Mad_Maxi-Jack{
+	text-align: center;
+	font-size: 30px;
+}
+
+.bouton{
+	margin: 10px auto;
+	width: 40%;
+	height:auto;
+	border-color: #990000;
+	border-style: outset;
+	background-color: yellow;
+    	text-align: center;
+    	display: block;
+	padding: 20px;
+	font-size: 25px;
+	border-radius: 5px;
+	color: green;
+}
 #contact{
 	display: none;
 	bottom: 30px;
-	
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
 }
 
-a.Contact {
-	position: absolute;
+#LienContact {
+	display: block;
+	margin: auto;
 	bottom: 8px;
+	margin-bottom: 1%;
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b8a3dfd15277ecea383d5255b5a357075ef2280a

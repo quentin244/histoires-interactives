@@ -14,11 +14,8 @@ function CacherContact()
 	lienContact.onclick = AfficherContact;
 }
 
-function scene(SceneX){
-<<<<<<< HEAD
-	console.log(SceneX);
-=======
->>>>>>> b340691fa6fc029d20f842bc01a0abe0816724eb
+function scene(SceneX)
+{
 	Cacher();
 	Afficher(SceneX);
 }
@@ -37,8 +34,6 @@ function Afficher(SceneX)
 {
 	document.getElementById(String(SceneX)).style.display = "block";
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 var monhist={
 	"title": "Mad_Maxi-Jack",
@@ -117,12 +112,8 @@ function initialiser()
 	creerHistoire(monhist);
 	scene(0);
 }
-=======
->>>>>>> b340691fa6fc029d20f842bc01a0abe0816724eb
-=======
 
 function Choix(num){
 	var coucou = document.getElementsByClassName("coucou");
 	coucou[num].style.display="block";
 }
->>>>>>> ae7dec9dc415a2bf8b316842996aa662a4f99f8e

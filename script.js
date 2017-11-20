@@ -15,7 +15,10 @@ function CacherContact()
 }
 
 function scene(SceneX){
+<<<<<<< HEAD
 	console.log(SceneX);
+=======
+>>>>>>> b340691fa6fc029d20f842bc01a0abe0816724eb
 	Cacher();
 	Afficher(SceneX);
 }
@@ -34,6 +37,7 @@ function Afficher(SceneX)
 {
 	document.getElementById(String(SceneX)).style.display = "block";
 }
+<<<<<<< HEAD
 
 var monhist={
 	"title": "Mad_Maxi-Jack",
@@ -112,3 +116,5 @@ function initialiser()
 	creerHistoire(monhist);
 	scene(0);
 }
+=======
+>>>>>>> b340691fa6fc029d20f842bc01a0abe0816724eb

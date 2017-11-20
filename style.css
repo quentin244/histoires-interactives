@@ -45,9 +45,13 @@ a.Histoire:active {
 	font-size: 30px;
 }
 
+.montext{
+	background-color: rgba(200, 20, 20, 0.6);
+}
+
 .bouton{
 	margin: 10px auto;
-	width: 40%;
+	width: 35%;
 	height:auto;
 	border-color: #990000;
 	border-style: outset;
@@ -75,4 +79,16 @@ a.Histoire:active {
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
+}
+
+.coucou {
+	display: none;
+	position: absolute;
+    	left: 0;
+    	top: 25%;
+    	width: 100%;
+    	text-align: center;
+    	font-size: 18px;
+	background-color: rgba(20, 20, 200, 0.6);
+	margin: auto;
 }

@@ -33,3 +33,8 @@ function Afficher(SceneX)
 {
 	document.getElementById(String(SceneX)).style.display = "block";
 }
+
+function Choix(num){
+	var coucou = document.getElementsByClassName("coucou");
+	coucou[num].style.display="block";
+}

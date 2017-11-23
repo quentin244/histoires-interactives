@@ -73,31 +73,31 @@ var monhist={
 
 function creerHistoire (objet)
 {
-	histoire = document.createElement("div");
+	var histoire = document.createElement("div");
 	histoire.id = objet.title;
 	
-	var i = 0
 	for (var i = 0; i in objet.scenes; i++) {
-		vignette = document.createElement("div");
+		var vignette = document.createElement("div");
 		vignette.className = "Scene";
 		vignette.id = i;
 		
-		monimg = document.createElement("img");
+		var monimg = document.createElement("img");
 		monimg.setAttribute("src", objet.scenes[i].urlimag);
 		
-		montxt = document.createElement("p");
-		t = document.createTextNode(objet.scenes[i].text);
+		var montxt = document.createElement("p");
+		var t = document.createTextNode(objet.scenes[i].text);
 		montxt.appendChild(t);
 		
-		vignette.appendChild(monimg);
+		var vignette.appendChild(monimg);
 		vignette.appendChild(montxt);
 		
 		for (var j = 0; j in objet.scenes[i].choices; j++) {
-			choix = document.createElement("BUTTON");
+			var choix = document.createElement("BUTTON");
 			choix.className = "bouton";
-			t = document.createTextNode(objet.scenes[i].choices[j].text);
+			
+			var tChx = document.createTextNode(objet.scenes[i].choices[j].text);
 			choix.setAttribute("name", objet.scenes[i].choices[j].output);
-			choix.appendChild(t)
+			choix.appendChild(tChx)
 			choix.onclick = function(){scene(this.getAttribute("name"))};
 			
 			vignette.appendChild(choix);

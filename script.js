@@ -88,9 +88,10 @@ function creerHistoire (objet)
 		var t = document.createTextNode(objet.scenes[i].text);
 		montxt.appendChild(t);
 		
-		var vignette.appendChild(monimg);
+		vignette.appendChild(monimg);
 		vignette.appendChild(montxt);
 		
+		if(objet.scenes[i].choices
 		for (var j = 0; j in objet.scenes[i].choices; j++) {
 			var choix = document.createElement("BUTTON");
 			choix.className = "bouton";

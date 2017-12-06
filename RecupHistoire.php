@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Mad Maxi Jack</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
@@ -17,44 +17,45 @@ try {
 }
 
 catch (PDOException $e) {
-    echo 'Connexion échouée : ';
+	echo('Erreur: '. $e->getMessage());
 }
 $stmt = $dbh->query('SELECT * FROM page');
 
 ?>
 <body id = "MadMaxiJack" onload='scene(0)'>
 
-<div id="Mad_Maxi-Jack">
-	
-	<?php
-	$i = 0;
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+	<div id="Mad_Maxi-Jack">
 
- ?>
- <div class="Scene" id=<?php echo $i?>> <!--page 1-->
- <img src="<?php echo $row['Image']?>"/>
+		<?php
+		$i = 0;
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
- <p><?php echo $row['Texte']?></p>
+			?>
+			<div class="Scene" id=<?php echo $i?>> <!--page 1-->
+				<img src="<?php echo $row['Image']?>"/>
 
- <?php
-$stmt2 = $dbh->query("SELECT * FROM choix where IdPageProposition = $i ");
+				<p><?php echo $row['Texte']?></p>
 
-	?> 
-	<input class = 'bouton' type='button' value='suivant' OnClick='scene(<?php echo $i + 1 ?>)'>
-<?php
+				<?php
+				$stmt2 = $dbh->query("SELECT * FROM choix where IdPageProposition = $i ");
 
-while($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
- ?>
- 
-<input class = 'bouton' type='button' value=<?php echo $row2['TextProposition']?> OnClick= 'scene(<?php echo $row2['IdPagePropose'] ?>)'>
-<?php
-}
-?> 
-<?php
-$i = $i+1;
-echo "</div>";
-}
-?>
-</div>
+				?> 
+				<input class = 'bouton' type='button' value='suivant' OnClick='scene(<?php echo $i + 1 ?>)'>
+				<?php
+
+				while($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+					?>
+
+					<input class = 'bouton' type='button' value=<?php echo $row2['TextProposition']?> OnClick= 'scene(<?php echo $row2['IdPagePropose'] ?>)'>
+					<?php
+				}
+				?> 
+				<?php
+				$i = $i+1;
+				echo "</div>";
+			}
+			?>
+		</div>
+	</div>
 </body>
 </html>

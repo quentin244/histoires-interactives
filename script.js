@@ -63,15 +63,37 @@ xmlhttp.onreadystatechange = function() {
 		vignette.appendChild(monimg);
 		vignette.appendChild(montxt);
 		
-		for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
-			var choix = document.createElement("BUTTON");
-			choix.className = "bouton";
-			var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
-			choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
-			choix.appendChild(txt)
+		var IdBlocChoix = 0
+		var choix = document.createElement("BUTTON");
+		choix.className = "bouton";
+		var txt = document.createTextNode("Suivant");
+		choix.appendChild(txt)
+		
+		if(JSONhistoire.scenes[i].choices == undefined){
+			choix.setAttribute("name", (i + 1));
 			choix.onclick = function(){scene(this.getAttribute("name"))};
 			
 			vignette.appendChild(choix);
+		}
+		else{
+			choix.onclick = function(){Choix(IdBlocChoix)};
+			
+			vignette.appendChild(choix);
+
+			var DivCoucou = document.createElement("div");
+			DivCoucou.className = "coucou";
+		
+			for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
+				var choix = document.createElement("BUTTON");
+				choix.className = "bouton";
+				var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
+				choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
+				choix.appendChild(txt)
+				choix.onclick = function(){scene(this.getAttribute("name"))};
+				DivCoucou.appendChild(choix);
+			}
+			vignette.appendChild(DivCoucou);
+			IdBlocChoix++;
 		}
 		histoire.appendChild(vignette);
 		document.body.appendChild(histoire);

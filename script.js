@@ -39,30 +39,30 @@ function initialiserHistoire (LienJSON)
 {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var JSONhistoire = JSON.parse(this.responseText);
+	if (this.readyState == 4 && this.status == 200) {
+		var JSONhistoire = JSON.parse(this.responseText);
 
-	var histoire = document.createElement("div");
-	histoire.id = JSONhistoire.title;
+		var histoire = document.createElement("div");
+		histoire.id = JSONhistoire.title;
 
-	for (var i = 0; i in JSONhistoire.scenes; i++) {
-		var vignette = document.createElement("div");
-		vignette.className = "Scene";
-		vignette.id = i;
+		for (var i = 0; i in JSONhistoire.scenes; i++) {
+
+			var vignette = document.createElement("div");
+			vignette.className = "Scene";
+			vignette.id = i;
 		
-		var monimg = document.createElement("img");
-		monimg.setAttribute("src", JSONhistoire.scenes[i].urlimag);
+			var monimg = document.createElement("img");
+
+			monimg.setAttribute("src", JSONhistoire.scenes[i].urlimag);
 		
-		var montxt = document.createElement("p");
-		var monspan = document.createElement("span");
-		monspan.className = "montext";
-		var t = document.createTextNode(JSONhistoire.scenes[i].text);
-		monspan.appendChild(t);
-		montxt.appendChild(monspan);
+			var montxt = document.createElement("p");
+			var monspan = document.createElement("span");
+			monspan.className = "montext";
+			var t = document.createTextNode(JSONhistoire.scenes[i].text);
+			monspan.appendChild(t);
+			montxt.appendChild(monspan);
 		
-		vignette.appendChild(monimg);
-		vignette.appendChild(montxt);
-		
+<<<<<<< HEAD
 		var IdBlocChoix = 0
 		var choix = document.createElement("BUTTON");
 		choix.className = "bouton";
@@ -97,14 +97,30 @@ xmlhttp.onreadystatechange = function() {
 		}
 		histoire.appendChild(vignette);
 		document.body.appendChild(histoire);
+=======
+			vignette.appendChild(monimg);
+			vignette.appendChild(montxt);
+
+			for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
+				var choix = document.createElement("BUTTON");
+				choix.className = "bouton";
+				var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
+				choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
+				choix.appendChild(txt)
+				choix.onclick = function(){scene(this.getAttribute("name"))};
+			
+				vignette.appendChild(choix);
+			}
+			histoire.appendChild(vignette);
+			document.body.appendChild(histoire);
+>>>>>>> e040de37b8d9cb9c709cdc108116e889637f9a14
 		
-		if(xmlhttp.readyState == 4) 
-      { 
-		scene(0);
-	  }
+			if(xmlhttp.readyState == 4) { 
+			scene(0);
+		  	}
+		}
 	}
-	}
-	};
+};
 xmlhttp.open("GET", LienJSON, true);
 xmlhttp.send();
 }

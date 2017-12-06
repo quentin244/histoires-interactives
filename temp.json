@@ -87,5 +87,95 @@
 			}],
 			"Fin": 0
 		}
+		{
+			"id": 3,
+			"urlimag": "img/3.png",
+			"text": "Bon, vous vous doutez du topo... Grands espaces dévastés, bandes de psychopathes lourdement armés tyrannisant de pauvres villageois, créatures mutantes et tout le tintouin. Tout cela associé à une toute nouvelle charte graphique.",
+			"choices": [{
+				"text": "suivant",
+				"output": 4
+			}],
+			"Fin": 0
+		}
+		{
+			"id": 4,
+			"urlimag": "img/4.png",
+			"text": "Il est à noter que la peau de Maxi-Jack s'est légèrement teintée de rose. Cela est dû à l'explosion nucléaire dont l'épicentre était située à 500 mètres de lui.",
+			"choices": [{
+				"text": "suivant",
+				"output": 5
+			}],
+			"Fin": 0
+		}
+		{
+			"id": 5,
+			"urlimag": "img/5.png",
+			"text": "Bon, Mad Maxi-Jack a la dalle, il n'a rien bouffé depuis trois semaines. Que faire ?",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
+		{
+			"id": ,
+			"urlimag": "img/.png",
+			"text": "",
+			"choices": [{
+				"text": "suivant",
+				"output": 
+			}],
+			"Fin": 0
+		}
 	]
 }

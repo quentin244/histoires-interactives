@@ -86,7 +86,7 @@
 				"output": 12
 			}],
 			"Fin": 0
-		}
+		},
 		{
 			"id": 3,
 			"urlimag": "img/3.png",
@@ -96,7 +96,7 @@
 				"output": 4
 			}],
 			"Fin": 0
-		}
+		},
 		{
 			"id": 4,
 			"urlimag": "img/4.png",
@@ -104,76 +104,6 @@
 			"choices": [{
 				"text": "suivant",
 				"output": 5
-			}],
-			"Fin": 0
-		}
-		{
-			"id": 5,
-			"urlimag": "img/5.png",
-			"text": "Bon, Mad Maxi-Jack a la dalle, il n'a rien bouffé depuis trois semaines. Que faire ?",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
-			}],
-			"Fin": 0
-		}
-		{
-			"id": ,
-			"urlimag": "img/.png",
-			"text": "",
-			"choices": [{
-				"text": "suivant",
-				"output": 
 			}],
 			"Fin": 0
 		}

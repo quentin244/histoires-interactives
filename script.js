@@ -62,7 +62,6 @@ xmlhttp.onreadystatechange = function() {
 			monspan.appendChild(t);
 			montxt.appendChild(monspan);
 		
-<<<<<<< HEAD
 		var IdBlocChoix = 0
 		var choix = document.createElement("BUTTON");
 		choix.className = "bouton";
@@ -97,23 +96,7 @@ xmlhttp.onreadystatechange = function() {
 		}
 		histoire.appendChild(vignette);
 		document.body.appendChild(histoire);
-=======
-			vignette.appendChild(monimg);
-			vignette.appendChild(montxt);
 
-			for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
-				var choix = document.createElement("BUTTON");
-				choix.className = "bouton";
-				var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
-				choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
-				choix.appendChild(txt)
-				choix.onclick = function(){scene(this.getAttribute("name"))};
-			
-				vignette.appendChild(choix);
-			}
-			histoire.appendChild(vignette);
-			document.body.appendChild(histoire);
->>>>>>> e040de37b8d9cb9c709cdc108116e889637f9a14
 		
 			if(xmlhttp.readyState == 4) { 
 			scene(0);

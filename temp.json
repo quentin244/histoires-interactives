@@ -1,0 +1,57 @@
+{
+	"title": "Mad_Maxi-Jack",
+	"scenes": [{
+			"id": 0,
+			"urlimag": "img/0.png",
+			"text": "Maxi-Jack coule des jours heureux une fois de plus, mais une soudaine intuition le pousse à penser qu'il ne profitera pas de ces moments bénis trop longtemps.",
+			
+			"Fin": 0
+		},	
+
+		{
+			"id": 1,
+			"urlimag": "img/1.png",
+			"text": "Car, suite à une négligence humaine, la planète subit des dommages irréversibles au niveau écologique et en terme d'organisation de la société également.",
+			"Fin": 0
+		},
+		{
+			"id": 2,
+			"urlimag": "img/2.png",
+			"text": "Bref go Mad Maxi-Jack ! Bats-toi pour ta survie !",
+			"Fin": 0
+		},
+		
+		{
+			"id": 3,
+			"urlimag": "img/3.png",
+			"text": "Bon, vous vous doutez du topo... Grands espaces dévastés, bandes de psychopathes lourdement armés tyrannisant de pauvres villageois, créatures mutantes et tout le tintouin. Tout cela associé à une toute nouvelle charte graphique.",
+			"Fin": 0
+		},
+		
+		{
+			"id": 4,
+			"urlimag": "img/4.png",
+			"text": "Il est à noter que la peau de Maxi-Jack s'est légèrement teintée de rose. Cela est dû à l'explosion nucléaire dont l'épicentre était située à 500 mètres de lui.",
+			"Fin": 0
+		},
+		
+		{
+			"id": 5,
+			"urlimag": "img/5.png",
+			"text": "Bon, Mad Maxi-Jack a la dalle, il n'a rien bouffé depuis trois semaines. Que faire ?",
+			"idChoix": 0,
+			"choices": [{
+				"text": "Manger l'espèce de boue jaune devant",
+				"output": 1
+			},
+			{
+				"text": "Rogner l'écorce de l'arbre",
+				"output": 2
+			},
+			{
+				"text": "Fouiller ses poches",
+
+				"output": 3
+			}]
+		}]
+}

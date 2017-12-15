@@ -10,7 +10,7 @@
 <?php
 
 try {
-  $dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', '');
+  $dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', 'root');
 } 
 catch (PDOException $e) {
   die('Erreur : ' . $e->getMessage());

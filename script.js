@@ -14,6 +14,11 @@ function CacherContact()
 	lienContact.onclick = AfficherContact;
 }
 
+function Titre()
+{
+	
+}
+
 function scene(SceneX)
 {
 	Cacher();

@@ -1,3 +1,5 @@
+var IdBlocChoix = 0;
+
 function AfficherContact()
 {
 	document.getElementById("contact").style.display = "block";
@@ -35,7 +37,7 @@ function Afficher(SceneX)
 	document.getElementById(String(SceneX)).style.display = "block";
 }
 
-function initialiserHistoire (LienJSON)
+function initialiserHistoire ()
 {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
@@ -43,14 +45,13 @@ function initialiserHistoire (LienJSON)
 			var JSONhistoire = JSON.parse(this.responseText);
 			var histoire = document.createElement("div");
 			histoire.id = JSONhistoire.title;
-			
+
 			for (var i = 0; i in JSONhistoire.scenes; i++) {
 				var vignette = document.createElement("div");
 				vignette.className = "Scene";
 				vignette.id = i;
 				var monimg = document.createElement("img");
-				monimg.setAttribute("src", JSONhistoire.scenes[i].urlimag);
-				
+				monimg.setAttribute("src", JSONhistoire.scenes[i].urlimage);
 				vignette.appendChild(monimg);
 								
 				var montxt = document.createElement("p");
@@ -61,35 +62,45 @@ function initialiserHistoire (LienJSON)
 				montxt.appendChild(monspan);
 				
 				vignette.appendChild(montxt);
-				
-				IdBlocChoix = 0
-				var choix = document.createElement("BUTTON");
-				choix.className = "bouton";
-				var txt = document.createTextNode("Suivant");
-				choix.appendChild(txt)
-				
-				if(JSONhistoire.scenes[i].choices == undefined){
-					choix.setAttribute("name", (i + 1));
-					choix.onclick = function(){scene(this.getAttribute("name"))};
+				if(JSONhistoire.scenes[i].fin == 1){
+					var choix = document.createElement("BUTTON");
+					choix.className = "bouton";
+					var txt = document.createTextNode("Retour");
+					choix.appendChild(txt)
+
+					choix.href = "index.html";
+					choix.onclick = function(){document.location.href="index.html"; };
 					vignette.appendChild(choix);
 				}
 				else{
-					choix.setAttribute("name", IdBlocChoix);
-					choix.onclick = function(){Choix(this.getAttribute("name"))};
-					vignette.appendChild(choix);
-					var DivCoucou = document.createElement("div");
-					DivCoucou.className = "coucou";
-					for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
-						var choix = document.createElement("BUTTON");
-						choix.className = "bouton";
-						var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
-						choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
-						choix.appendChild(txt)
+					var choix = document.createElement("BUTTON");
+					choix.className = "bouton";
+					var txt = document.createTextNode("Suivant");
+					choix.appendChild(txt)
+					
+					if(JSONhistoire.scenes[i].choices == undefined){
+						choix.setAttribute("name", (i + 1));
 						choix.onclick = function(){scene(this.getAttribute("name"))};
-						DivCoucou.appendChild(choix);
+						vignette.appendChild(choix);
 					}
-					vignette.appendChild(DivCoucou);
-					IdBlocChoix++;
+					else{
+						choix.setAttribute("name", IdBlocChoix);
+						choix.onclick = function(){Choix(this.getAttribute("name"))};
+						vignette.appendChild(choix);
+						var DivCoucou = document.createElement("div");
+						DivCoucou.className = "coucou";
+						for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
+							var choix = document.createElement("BUTTON");
+							choix.className = "bouton";
+							var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
+							choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
+							choix.appendChild(txt)
+							choix.onclick = function(){scene(this.getAttribute("name"))};
+							DivCoucou.appendChild(choix);
+						}
+						vignette.appendChild(DivCoucou);
+						IdBlocChoix++;
+					}
 				}
 
 				histoire.appendChild(vignette);
@@ -101,8 +112,12 @@ function initialiserHistoire (LienJSON)
 			}
 		}
 	};
-	xmlhttp.open("GET", LienJSON, true);
+	xmlhttp.open("GET", "RecupHistoire.php", true);
 	xmlhttp.send();
+}
+
+function initialiserChoixHistoire(){
+
 }
 
 function Choix(num){

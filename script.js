@@ -1,4 +1,5 @@
 var IdBlocChoix = 0;
+var titreHist = document.cookie.replace("titreHist=", '');
 
 function AfficherContact()
 {
@@ -112,15 +113,16 @@ function initialiserHistoire ()
 			}
 		}
 	};
-	xmlhttp.open("GET", "RecupHistoire.php", true);
+	xmlhttp.open("GET", "RecupHistoire.php?titreHist=" + titreHist, true);
 	xmlhttp.send();
-}
-
-function initialiserChoixHistoire(){
-
 }
 
 function Choix(num){
 	var coucou = document.getElementsByClassName("coucou");
 	coucou[num].style.display="block";
+}
+
+function ClickBouton(id){
+	document.cookie = "titreHist=" + id;
+	window.location = "histoire.html";
 }

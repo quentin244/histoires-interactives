@@ -1,5 +1,5 @@
 <?php
-
+$title = $_GET["titreHist"];
 try {
 	$dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', '');
 } 
@@ -8,11 +8,11 @@ catch (PDOException $e) {
 }
 
 try {
-	$TabHist = $dbh->prepare('SELECT * FROM histoire');
+	$TabHist = $dbh->prepare('SELECT * FROM histoire Where Titre = :Titre');
+	$TabHist->bindParam(':Titre', $title, PDO::PARAM_STR);
 	$TabHist->execute();
 	$resultHist = $TabHist->fetchAll();
  
-	if ( count($resultHist) ) { 
 		foreach($resultHist as $rowHist) {
 			$ArraySceneTout = Array();
 			$TitreHist = $rowHist['Titre'];
@@ -51,11 +51,7 @@ try {
 			$SceneJson = json_encode($ArrayHistoire);
 			echo $SceneJson;
 		}
-	}
-	else{
-		echo "Aucune histoire.";
-	}
-} 
+}
 catch(PDOException $e) {
 	echo 'ERROR: ' . $e->getMessage();
 }

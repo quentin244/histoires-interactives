@@ -69,8 +69,8 @@ function initialiserHistoire ()
 					var txt = document.createTextNode("Retour");
 					choix.appendChild(txt)
 
-					choix.href = "index.html";
-					choix.onclick = function(){document.location.href="index.html"; };
+					choix.href = "index.php";
+					choix.onclick = function(){document.location.href="index.php"; };
 					vignette.appendChild(choix);
 				}
 				else{

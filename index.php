@@ -51,19 +51,19 @@ catch(PDOException $e) {
 
 <p>Formulaire de contact</p>
 
-<form name="Contact" id="contactForm">
+<form name="Contact" id="contactForm" method="post" action="TraitContact.php">
 
 <label>Nom</label>
-<input type="text" placeholder="Nom" id="nom" title = "Nom" required data-validation-required-message="Entrer votre nom.">
+<input type="text" placeholder="Nom" id="nom" name="nom" title = "nom" required data-validation-required-message="Entrer votre nom.">
 </br>
 <label>Addresse email</label>
-<input type="email" placeholder="Addresse email" id="email" title = "email" required data-validation-required-message="Entrer votre addresse email.">
+<input type="email" placeholder="Addresse email" id="email" name="email" title = "email" required data-validation-required-message="Entrer votre addresse email.">
 </br>
 <label>Numeros Telephone</label>
-<input type="tel" placeholder="Numero Telephone" id="tel" title="tel" required data-validation-required-message="Entrer votre numeros de telephone.">
+<input type="tel" placeholder="Numero Telephone" id="tel" name="tel" title="tel" required data-validation-required-message="Entrer votre numeros de telephone.">
 </br>
 <label>Message</label>
-<textarea rows="5" placeholder="Message" id="message" title="message" required data-validation-required-message="Entrer un message."></textarea>
+<textarea rows="5" placeholder="Message" id="message" name ="message" title="message" required data-validation-required-message="Entrer un message."></textarea>
 </br>
 <button type="submit" id="envoyer" title = "Envoyer">Envoyer</button>
 </form>

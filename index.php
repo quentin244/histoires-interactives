@@ -7,6 +7,13 @@
 <script src="script.js"></script>
 </head>
 <body id="Index">
+	<div id="menu">
+		<ul>
+			<li>
+				<a href="connexion.php">connexion</a>
+            </li>
+        </ul>
+    </div>
 
 <div id="Titre"><H1>Bienvenue dans Xarsaroth!!!</H1></div>
 
@@ -44,6 +51,8 @@ catch(PDOException $e) {
 }
 ?>
 </div>
+
+
 
 <a id="LienContact" href="#" onclick="AfficherContact()" >Contactez-Nous</a>
 

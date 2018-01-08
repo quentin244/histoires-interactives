@@ -7,8 +7,8 @@ CREATE TABLE `histoire` (
 
 DROP TABLE IF EXISTS `page`;
 CREATE TABLE `page` (
-  `Id` int(11) ,
-  `Histoire` int(11),,
+  `Id` int(11),
+  `Histoire` int(11),
   `Image` varchar(255),
   `Texte` Text,
   `Fin` tinyint(1),
@@ -22,7 +22,7 @@ CREATE TABLE `choix` (
   `IdPageProposition` int(11) NOT NULL,
   `IdPagePropose` int(11) NOT NULL,
   `TextProposition` text CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`Id_Choix`)
+  PRIMARY KEY (`Id_Choix`),
   FOREIGN KEY (`IdPageProposition`) REFERENCES `page` (`Id`),
   FOREIGN KEY (`IdPagePropose`) REFERENCES `page` (`Id`)
 );

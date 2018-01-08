@@ -10,15 +10,20 @@
 <?php
 
 try {
-  $dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', '');
+  $dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', 'root');
 } 
 catch (PDOException $e) {
   die('Erreur : ' . $e->getMessage());
 }
 
 try {
-  $TabPage = $dbh->prepare('SELECT * FROM page');
+
+	$TabPage = $dbh->prepare('SELECT * FROM page');
   $TabPage->execute();
+  
+  $TabHist = $dbh->prepare('SELECT H.Titre FROM histoire H, page P where P.Histoire=H.Id');
+  $TabHist->execute();
+  
  
   $resultPage = $TabPage->fetchAll();
  
@@ -38,15 +43,15 @@ try {
 				}
 			}
 			else{
-			$ArrayScene = Array('Id'=>$rowPage['Id'], 'urlimage'=>$rowPage['Image'], 'text'=>utf8_encode($rowPage['Texte']), 'fin'=>$rowPage['Fin']);
+				$ArrayScene = Array('Id'=>$rowPage['Id'], 'urlimage'=>$rowPage['Image'], 'text'=>utf8_encode($rowPage['Texte']), 'fin'=>$rowPage['Fin']);
 			}
+			$ArrayHist = Array('title'=>$TabHist, 'scenes'=>$ArrayScene);
 			var_dump($ArrayScene);
 			print_r(json_encode($ArrayScene));
 			echo("</br>");
 		} 
-	}
-   else {
-	   echo "Aucune Page pour cete histoire.";
+	} else {
+		echo "Aucune Page pour cette histoire.";
   }
 } 
 catch(PDOException $e) {

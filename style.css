@@ -38,11 +38,12 @@ a.Histoire:active {
 }
 #MadMaxiJack{
 	background-image: url("sable.jpg");
+	text-align: center;
+	font-size: 30px;
 }
 
 #Mad_Maxi-Jack{
-	text-align: center;
-	font-size: 30px;
+
 }
 
 .montext{

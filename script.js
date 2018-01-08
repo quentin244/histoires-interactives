@@ -1,3 +1,6 @@
+var IdBlocChoix = 0;
+var titreHist = document.cookie.replace("titreHist=", '');
+
 function AfficherContact()
 {
 	document.getElementById("contact").style.display = "block";
@@ -35,80 +38,91 @@ function Afficher(SceneX)
 	document.getElementById(String(SceneX)).style.display = "block";
 }
 
-function initialiserHistoire (LienJSON)
+function initialiserHistoire ()
 {
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var JSONhistoire = JSON.parse(this.responseText);
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var JSONhistoire = JSON.parse(this.responseText);
+			var histoire = document.createElement("div");
+			histoire.id = JSONhistoire.title;
 
-		var histoire = document.createElement("div");
-		histoire.id = JSONhistoire.title;
+			for (var i = 0; i in JSONhistoire.scenes; i++) {
+				var vignette = document.createElement("div");
+				vignette.className = "Scene";
+				vignette.id = i;
+				var monimg = document.createElement("img");
+				monimg.setAttribute("src", JSONhistoire.scenes[i].urlimage);
+				vignette.appendChild(monimg);
+								
+				var montxt = document.createElement("p");
+				var monspan = document.createElement("span");
+				monspan.className = "montext";
+				var t = document.createTextNode(JSONhistoire.scenes[i].text);
+				monspan.appendChild(t);
+				montxt.appendChild(monspan);
+				
+				vignette.appendChild(montxt);
+				if(JSONhistoire.scenes[i].fin == 1){
+					var choix = document.createElement("BUTTON");
+					choix.className = "bouton";
+					var txt = document.createTextNode("Retour");
+					choix.appendChild(txt)
 
-		for (var i = 0; i in JSONhistoire.scenes; i++) {
+					choix.href = "index.php";
+					choix.onclick = function(){document.location.href="index.php"; };
+					vignette.appendChild(choix);
+				}
+				else{
+					var choix = document.createElement("BUTTON");
+					choix.className = "bouton";
+					var txt = document.createTextNode("Suivant");
+					choix.appendChild(txt)
+					
+					if(JSONhistoire.scenes[i].choices == undefined){
+						choix.setAttribute("name", (i + 1));
+						choix.onclick = function(){scene(this.getAttribute("name"))};
+						vignette.appendChild(choix);
+					}
+					else{
+						choix.setAttribute("name", IdBlocChoix);
+						choix.onclick = function(){Choix(this.getAttribute("name"))};
+						vignette.appendChild(choix);
+						var DivCoucou = document.createElement("div");
+						DivCoucou.className = "coucou";
+						for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
+							var choix = document.createElement("BUTTON");
+							choix.className = "bouton";
+							var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
+							choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
+							choix.appendChild(txt)
+							choix.onclick = function(){scene(this.getAttribute("name"))};
+							DivCoucou.appendChild(choix);
+						}
+						vignette.appendChild(DivCoucou);
+						IdBlocChoix++;
+					}
+				}
 
-			var vignette = document.createElement("div");
-			vignette.className = "Scene";
-			vignette.id = i;
+				histoire.appendChild(vignette);
+				document.body.appendChild(histoire);
 		
-			var monimg = document.createElement("img");
-
-			monimg.setAttribute("src", JSONhistoire.scenes[i].urlimag);
-		
-			var montxt = document.createElement("p");
-			var monspan = document.createElement("span");
-			monspan.className = "montext";
-			var t = document.createTextNode(JSONhistoire.scenes[i].text);
-			monspan.appendChild(t);
-			montxt.appendChild(monspan);
-		
-		var IdBlocChoix = 0
-		var choix = document.createElement("BUTTON");
-		choix.className = "bouton";
-		var txt = document.createTextNode("Suivant");
-		choix.appendChild(txt)
-		
-		if(JSONhistoire.scenes[i].choices == undefined){
-			choix.setAttribute("name", (i + 1));
-			choix.onclick = function(){scene(this.getAttribute("name"))};
-			
-			vignette.appendChild(choix);
-		}
-		else{
-			choix.onclick = function(){Choix(IdBlocChoix)};
-			
-			vignette.appendChild(choix);
-
-			var DivCoucou = document.createElement("div");
-			DivCoucou.className = "coucou";
-		
-			for (var j = 0; j in JSONhistoire.scenes[i].choices; j++) {
-				var choix = document.createElement("BUTTON");
-				choix.className = "bouton";
-				var txt = document.createTextNode(JSONhistoire.scenes[i].choices[j].text);
-				choix.setAttribute("name", JSONhistoire.scenes[i].choices[j].output);
-				choix.appendChild(txt)
-				choix.onclick = function(){scene(this.getAttribute("name"))};
-				DivCoucou.appendChild(choix);
+				if(xmlhttp.readyState == 4) { 
+					scene(0);
+				}
 			}
-			vignette.appendChild(DivCoucou);
-			IdBlocChoix++;
 		}
-		histoire.appendChild(vignette);
-		document.body.appendChild(histoire);
-
-		
-			if(xmlhttp.readyState == 4) { 
-			scene(0);
-		  	}
-		}
-	}
-};
-xmlhttp.open("GET", LienJSON, true);
-xmlhttp.send();
+	};
+	xmlhttp.open("GET", "RecupHistoire.php?titreHist=" + titreHist, true);
+	xmlhttp.send();
 }
 
 function Choix(num){
 	var coucou = document.getElementsByClassName("coucou");
 	coucou[num].style.display="block";
+}
+
+function ClickBouton(id){
+	document.cookie = "titreHist=" + id;
+	window.location = "histoire.html";
 }

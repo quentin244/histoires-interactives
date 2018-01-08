@@ -1,61 +1,58 @@
-﻿<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Mad Maxi Jack</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
-
 <?php
-$dsn = 'mysql:dbname=histoire_interactive;host=localhost';
-$user = 'root';
-$password = '';
+$title = $_GET["titreHist"];
+try {
+	$dbh = new PDO('mysql:host=localhost;dbname=histoire_interactive', 'root', '');
+} 
+catch (PDOException $e) {
+	die('Erreur : ' . $e->getMessage());
+}
 
 try {
-	$dbh = new PDO($dsn, $user, $password);
-}
-
-catch (PDOException $e) {
-	echo('Erreur: '. $e->getMessage());
-}
-$stmt = $dbh->query('SELECT * FROM page');
-
-?>
-<body id = "MadMaxiJack" onload='scene(0)'>
-
-	<div id="Mad_Maxi-Jack">
-
-		<?php
-		$i = 0;
-		while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-			?>
-			<div class="Scene" id=<?php echo $i?>> <!--page 1-->
-				<img src="<?php echo $row['Image']?>"/>
-
-				<p><?php echo $row['Texte']?></p>
-
-				<?php
-				$stmt2 = $dbh->query("SELECT * FROM choix where IdPageProposition = $i ");
-
-				?> 
-				<input class = 'bouton' type='button' value='suivant' OnClick='scene(<?php echo $i + 1 ?>)'>
-				<?php
-
-				while($row2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
-					?>
-
-					<input class = 'bouton' type='button' value=<?php echo $row2['TextProposition']?> OnClick= 'scene(<?php echo $row2['IdPagePropose'] ?>)'>
-					<?php
-				}
-				?> 
-				<?php
-				$i = $i+1;
-				echo "</div>";
+	$TabHist = $dbh->prepare('SELECT * FROM histoire Where Titre = :Titre');
+	$TabHist->bindParam(':Titre', $title, PDO::PARAM_STR);
+	$TabHist->execute();
+	$resultHist = $TabHist->fetchAll();
+ 
+		foreach($resultHist as $rowHist) {
+			$ArraySceneTout = Array();
+			$TitreHist = $rowHist['Titre'];
+			
+			$TabPage = $dbh->prepare('SELECT * FROM page Where Histoire = :Id');
+			$TabPage->bindParam(':Id', $rowHist['Id'], PDO::PARAM_INT);
+			$TabPage->execute();
+			$resultPage = $TabPage->fetchAll();
+	 
+			if ( count($resultPage) ) { 
+				foreach($resultPage as $rowPage) {
+					$ArrayChoiceTout = Array();
+			
+					$TabChoix = $dbh->prepare('SELECT * FROM Choix Where IdPageProposition = :Id');
+					$TabChoix->bindParam(':Id', $rowPage['Id'], PDO::PARAM_INT);
+					$TabChoix->execute();
+					$resultChoix = $TabChoix->fetchAll();
+				
+					if ( count($resultChoix) ) { 
+						foreach($resultChoix as $rowChoix) {
+							$ArrayChoice = Array('text' =>utf8_encode($rowChoix['TextProposition']), 'output' =>$rowChoix['IdPagePropose']);
+							array_push($ArrayChoiceTout, $ArrayChoice);
+						}
+						$ArrayScene = Array('Id'=>$rowPage['Id'], 'urlimage'=>$rowPage['Image'], 'text'=>utf8_encode($rowPage['Texte']), 'choices' => $ArrayChoiceTout, 'fin'=>$rowPage['Fin']);
+					}
+					else{
+						$ArrayScene = Array('Id'=>$rowPage['Id'], 'urlimage'=>$rowPage['Image'], 'text'=> utf8_encode($rowPage['Texte']), 'fin'=>$rowPage['Fin']);
+					}
+					array_push($ArraySceneTout, $ArrayScene);
+				} 
 			}
-			?>
-		</div>
-	</div>
-</body>
-</html>
+			else {
+				echo "Aucune Page pour cette histoire.";
+			}
+			$ArrayHistoire = Array('title'=> $TitreHist ,'scenes' =>$ArraySceneTout);
+			$SceneJson = json_encode($ArrayHistoire);
+			echo $SceneJson;
+		}
+}
+catch(PDOException $e) {
+	echo 'ERROR: ' . $e->getMessage();
+}
+?>

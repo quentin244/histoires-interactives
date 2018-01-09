@@ -69,8 +69,8 @@ function initialiserHistoire ()
 					var txt = document.createTextNode("Retour");
 					choix.appendChild(txt)
 
-					choix.href = "index.html";
-					choix.onclick = function(){document.location.href="index.html"; };
+					choix.href = "index.php";
+					choix.onclick = function(){document.location.href="index.php"; };
 					vignette.appendChild(choix);
 				}
 				else{
@@ -117,15 +117,10 @@ function initialiserHistoire ()
 	xmlhttp.send();
 }
 
-function initialiserChoixHistoire(){
-
-}
-
 function Choix(num){
 	var coucou = document.getElementsByClassName("coucou");
 	coucou[num].style.display="block";
 }
-
 
 function ClickBouton(id){
 	document.cookie = "titreHist=" + id;
@@ -152,7 +147,6 @@ function farm(){
 		//<input type="text" name="choix[]" value="Choix 4">Numero scene<input type="number" name="direction[]" min="2"><br>
 		//<input type="text" name="choix[]" value="Choix 5">Numero scene<input type="number" name="direction[]" min="2"></div>
 		//Fin?: <input type="checkbox" name="fin[]"><br><br>
-		
 }
 
 function FIN(){

@@ -10,6 +10,7 @@
 <?php
 
 $_titre=$_POST["Titre"];
+<<<<<<< HEAD
 $_back = $_POST['background']
 $_img=$_POST["img"];
 $_text=$_POST["text"];
@@ -40,6 +41,17 @@ foreach($_back as $scene => $n){
 		$req->bindparam(2,$choice,PDO::PARAM_STR);
 	}
 	
+=======
+
+foreach($_POST['background'] as $background){
+echo $back;
+}
+foreach($_POST['text']as $text){
+echo $text;
+}
+foreach($_POST['img'] as $img){
+echo $img;
+>>>>>>> 5b748d03cda71fa9a384e4afb64aeac950bd8599
 }
 
 ?>

@@ -8,7 +8,11 @@ $telephone_client = $_POST['telephone_client'];
 
 try
 {
+<<<<<<< HEAD
 	$bdd = new PDO('mysql:host=localhost;dbname=histoire_interactive;charset=utf8', 'root', 'root');
+=======
+	$bdd = new PDO('mysql:host=localhost;dbname=histoire_interactive;charset=utf8', 'root', '');
+>>>>>>> 5b748d03cda71fa9a384e4afb64aeac950bd8599
 }
 catch(Exception $e)
 {

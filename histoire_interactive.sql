@@ -27,8 +27,25 @@ CREATE TABLE `choix` (
   FOREIGN KEY (`IdPagePropose`) REFERENCES `page` (`Id`)
 );
 
+CREATE TABLE `utilisateurs` (
+  `Nom` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Mdp` varchar(255) NOT NULL,
+  `Telephone` int(11) NOT NULL,
+  PRIMARY KEY (`Email`)
+);
+
+CREATE TABLE `avancement` (
+  `EmailUtilisateur` varchar(255) NOT NULL REFERENCES `utilisateurs` (`Email`),
+  `IdHistoire` int(11) NOT NULL REFERENCES `histoire` (`Id`),
+  `IdPage` int(11) DEFAULT NULL REFERENCES `page` (`Id`),
+  PRIMARY KEY (`EmailUtilisateur`,`IdHistoire`)
+) 
+
 INSERT INTO `histoire` (`Id`, `Titre`) VALUES
-(1, 'Mad_Maxi-Jack');
+(1, 'Mad_Maxi-Jack'),
+(2, 'Histoire2');
 
 INSERT INTO `page` (`Id`, `Histoire`, `Image`, `Texte`, `Fin`) VALUES
 (0, 1, 'img/0.png', 'Maxi-Jack coule des jours heureux une fois de plus, mais une soudaine intuition le pousse à penser qu\'il ne profitera pas de ces moments bénis trop longtemps.', 0),
@@ -70,7 +87,8 @@ INSERT INTO `page` (`Id`, `Histoire`, `Image`, `Texte`, `Fin`) VALUES
 (36, 1, 'img/36.png', 'Mettant ses angoisses et son ego de côté, notre héros se dirige vers un garde du campement afin d\'expliquer sa situation et de plaider sa cause.', 0),
 (37, 1, 'img/37.png', 'Il est immédiatement jeté dans un cachot... En fait un trou dans la sol, couvert d\'une tôle. L\'après-midi risque d\'être chaud si il reste là-dedans.', 0),
 (38, 1, 'img/38.png', 'Du bruit, on arrive ! Le garde à sans doute prévenu son supérieur... Qu\'allez-vous lui proposer ?', 0),
-(39, 1, 'img/39.png', 'The End', 0);
+(39, 1, '', 'The End', 1),
+(0, 2, '', 'Bonjour Bienvenu dans l\'histoire', 1);
 
 
 INSERT INTO `choix` (`Id_Choix`, `IdPageProposition`, `IdPagePropose`, `TextProposition`) VALUES
@@ -98,3 +116,9 @@ INSERT INTO `choix` (`Id_Choix`, `IdPageProposition`, `IdPagePropose`, `TextProp
 (22, 32, 33, 'Notre héros n\'a pas perdu ses réflexes de survie élémentaire, il reste éloigné et cherche des restes de riz et de smecta à proximité'),
 (23, 32, 36, 'Rien à perdre, il rentre dans le camp'),
 (24, 38, 39, 'Entretenir les véhicules et les armes contre un peu de nourriture et d\'eau');
+
+INSERT INTO `utilisateurs` (`Nom`, `Prenom`, `Email`, `Mdp`, `Telephone`) VALUES
+('Joubert', 'Quentin', 'quentin.joubert28@gmail.com', 'QUENTIN123', 695047346);
+
+INSERT INTO `avancement` (`EmailUtilisateur`, `IdHistoire`, `IdPage`) VALUES
+('quentin.joubert28@gmail.com', 1, 1);

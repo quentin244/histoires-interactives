@@ -21,9 +21,6 @@
 Ici vous trouverez action, suspens, gloire... mort et désolation.</br>
 Choisissez imédiatement l'un des scénarios ci-dessous et embarquez dans une histoire où chacun de vos choix feront la différence entre une fin heureuse et... une fin tout court.<p></div>
 
-<a class="Histoire" href="CreerHistoire.html">Créer sa propre histoire</a>
-
-
 <div id="ChoixHistoire">
 <?php
 try {
@@ -55,6 +52,7 @@ catch(PDOException $e) {
 ?>
 </div>
 
+<a class="Histoire" href="CreerHistoire.html">Créer sa propre histoire</a>
 
 
 <a id="LienContact" href="#" onclick="AfficherContact()" >Contactez-Nous</a>

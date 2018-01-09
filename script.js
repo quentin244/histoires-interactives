@@ -126,3 +126,28 @@ function ClickBouton(id){
 	document.cookie = "titreHist=" + id;
 	window.location = "histoire.html";
 }
+
+var id=0;
+
+function farm(){
+		id++;
+		var Nform = document.createElement("div");
+		Nform.id=id;
+		var text="Scene"+id;
+		var textN=document.createTextNode(text);
+		document.getElementById("container").appendChild(textN);
+		document.getElementById("container").appendChild(Nform);
+		document.getElementById(id).innerHTML='Choisissez un fond: <input type="file" name="background[]"><br>Choisissez une image: <input type="file" name="img[]"><br><br><br>Placer du texte: <textarea type="message" name="text[]" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="text" value="Choix 1">Numero scene<input type="number" min="2"><input type="text" value="Choix 2">Numero scene<input type="number" min="2"><input type="text" value="Choix 3">Numero scene<input type="number" min="2"><input type="text" value="Choix 4">Numero scene<input type="number" min="2"><input type="text" value="Choix 5">Numero scene<input type="number" min="2"></div>';
+		//Choisissez un fond: <input type="file" name="background"><br>
+		//Choisissez une image: <input type="file" name="img"><br><br><br>
+		//Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br>
+		//<div class=choix><input type="text" value="Choix 1">Numero scene<input type="number" min="2">
+		//<input type="text" value="Choix 2">Numero scene<input type="number" min="2">
+		//<input type="text" value="Choix 3">Numero scene<input type="number" min="2">
+		//<input type="text" value="Choix 4">Numero scene<input type="number" min="2">
+		//<input type="text" value="Choix 5">Numero scene<input type="number" min="2"></div>
+}
+
+function FIN(){
+	alert("FIN!!!");
+}

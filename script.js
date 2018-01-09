@@ -142,28 +142,19 @@ function farm(){
 		var textN=document.createTextNode(text);
 		document.getElementById("container").appendChild(textN);
 		document.getElementById("container").appendChild(Nform);
-		document.getElementById(id).innerHTML='Choisissez un fond: <input type="file" name="background[]"><br>Choisissez une image: <input type="file" name="img[]"><br><br><br>Placer du texte: <textarea type="message" name="text[]" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="button" onclick="Possibility()" value="Choix"></div>';
+		document.getElementById(id).innerHTML='Choisissez un fond: <input type="file" name="background"><br>Choisissez une image: <input type="file" name="img"><br><br><br>Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="text" name="choix[]" value="Choix 1">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 2">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 3">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 4">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 5">Numero scene<input type="number" name="direction[]" min="2"></div>Fin?: <input type="checkbox" name="fin[]"><br><br>';
 		//Choisissez un fond: <input type="file" name="background"><br>
 		//Choisissez une image: <input type="file" name="img"><br><br><br>
 		//Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br>
+		//<div class=choix><input type="text" name="choix[]" value="Choix 1">Numero scene<input type="number" name="direction[]" min="2"><br>
+		//<input type="text" name="choix[]" value="Choix 2">Numero scene<input type="number" name="direction[]" min="2"><br>
+		//<input type="text" name="choix[]" value="Choix 3">Numero scene<input type="number" name="direction[]" min="2"><br>
+		//<input type="text" name="choix[]" value="Choix 4">Numero scene<input type="number" name="direction[]" min="2"><br>
+		//<input type="text" name="choix[]" value="Choix 5">Numero scene<input type="number" name="direction[]" min="2"></div>
+		//Fin?: <input type="checkbox" name="fin[]"><br><br>
+		
 }
 
 function FIN(){
 	alert("FIN!!!");
 }
-
-function ChoixPlus(){
-	var inputTxt=document.createElement("input");
-	inputTxt.type="text";
-}
-
-function Possibility(){
-	var choix=document.createElement("div");
-	choix.id="choice";
-	var inputDir=document.createElement("input");
-	inputDir.type="number";
-	var inputNew=document.createElement("input");
-	inputNew.type="button";
-	inputNew.value="Choix supplementaire";
-	inputNew.onclick="ChoixPlus()";
-	document.getElementById(

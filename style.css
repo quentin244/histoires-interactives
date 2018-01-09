@@ -98,12 +98,12 @@ a.Histoire:active {
 }
 .suivant {
     position: absolute;
-    bottom: -10px;
+    bottom: -25px;
     left: 16px;
 }
 
 .fin {
     position: absolute;
-    bottom: -10px;
+    bottom: -25px;
     left: 80px;
 }

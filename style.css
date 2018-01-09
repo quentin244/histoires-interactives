@@ -92,3 +92,18 @@ a.Histoire:active {
 	background-color: rgba(20, 20, 200, 0.6);
 	margin: auto;
 }
+
+#container{
+	position:relative;
+}
+.suivant {
+    position: absolute;
+    bottom: -10px;
+    left: 16px;
+}
+
+.fin {
+    position: absolute;
+    bottom: -10px;
+    left: 80px;
+}

@@ -1,4 +1,5 @@
 var IdBlocChoix = 0;
+var titreHist = document.cookie.replace("titreHist=", '');
 
 function AfficherContact()
 {
@@ -14,11 +15,6 @@ function CacherContact()
 	lienContact = document.getElementById("LienContact");
 	lienContact.text = "Contactez-Nous";
 	lienContact.onclick = AfficherContact;
-}
-
-function Titre()
-{
-	
 }
 
 function scene(SceneX)
@@ -117,7 +113,7 @@ function initialiserHistoire ()
 			}
 		}
 	};
-	xmlhttp.open("GET", "RecupHistoire.php", true);
+	xmlhttp.open("GET", "RecupHistoire.php?titreHist=" + titreHist, true);
 	xmlhttp.send();
 }
 
@@ -129,3 +125,45 @@ function Choix(num){
 	var coucou = document.getElementsByClassName("coucou");
 	coucou[num].style.display="block";
 }
+
+
+function ClickBouton(id){
+	document.cookie = "titreHist=" + id;
+	window.location = "histoire.html";
+}
+
+var id=0;
+
+function farm(){
+		id++;
+		var Nform = document.createElement("div");
+		Nform.id=id;
+		var text="Scene"+id;
+		var textN=document.createTextNode(text);
+		document.getElementById("container").appendChild(textN);
+		document.getElementById("container").appendChild(Nform);
+		document.getElementById(id).innerHTML='Choisissez un fond: <input type="file" name="background[]"><br>Choisissez une image: <input type="file" name="img[]"><br><br><br>Placer du texte: <textarea type="message" name="text[]" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="button" onclick="Possibility()" value="Choix"></div>';
+		//Choisissez un fond: <input type="file" name="background"><br>
+		//Choisissez une image: <input type="file" name="img"><br><br><br>
+		//Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br>
+}
+
+function FIN(){
+	alert("FIN!!!");
+}
+
+function ChoixPlus(){
+	var inputTxt=document.createElement("input");
+	inputTxt.type="text";
+}
+
+function Possibility(){
+	var choix=document.createElement("div");
+	choix.id="choice";
+	var inputDir=document.createElement("input");
+	inputDir.type="number";
+	var inputNew=document.createElement("input");
+	inputNew.type="button";
+	inputNew.value="Choix supplementaire";
+	inputNew.onclick="ChoixPlus()";
+	document.getElementById(

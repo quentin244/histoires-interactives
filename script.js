@@ -23,14 +23,12 @@ function scene(SceneX)
 	Afficher(SceneX);
 }
 
-
 function Cacher()
 {
 	var listScene = document.getElementsByClassName("Scene");
 	for (var i=0; i<listScene.length; i++){
 		listScene[i].style.display = "none";
 	}
-	
 }
 
 function Afficher(SceneX)
@@ -137,18 +135,9 @@ function farm(){
 		var textN=document.createTextNode(text);
 		document.getElementById("container").appendChild(textN);
 		document.getElementById("container").appendChild(Nform);
-		document.getElementById(id).innerHTML='Choisissez un fond: <input type="file" name="background"><br>Choisissez une image: <input type="file" name="img"><br><br><br>Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="text" name="choix[]" value="Choix 1">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 2">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 3">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 4">Numero scene<input type="number" name="direction[]" min="2"><br><input type="text" name="choix[]" value="Choix 5">Numero scene<input type="number" name="direction[]" min="2"></div>Fin?: <input type="checkbox" name="fin[]"><br><br>';
-		//Choisissez un fond: <input type="file" name="background"><br>
-		//Choisissez une image: <input type="file" name="img"><br><br><br>
-		//Placer du texte: <textarea type="message" name="text" rows="3" cols="30"> </textarea><br><br>
-		//<div class=choix><input type="text" name="choix[]" value="Choix 1">Numero scene<input type="number" name="direction[]" min="2"><br>
-		//<input type="text" name="choix[]" value="Choix 2">Numero scene<input type="number" name="direction[]" min="2"><br>
-		//<input type="text" name="choix[]" value="Choix 3">Numero scene<input type="number" name="direction[]" min="2"><br>
-		//<input type="text" name="choix[]" value="Choix 4">Numero scene<input type="number" name="direction[]" min="2"><br>
-		//<input type="text" name="choix[]" value="Choix 5">Numero scene<input type="number" name="direction[]" min="2"></div>
-		//Fin?: <input type="checkbox" name="fin[]"><br><br>
+		document.getElementById(id).innerHTML='<input type="number" class="invisible" name="id[]" value='+id+'> Choisissez un fond: <input type="file" name="background[]"><br>Choisissez une image: <input type="file" name="img[]"><br><br><br>Placer du texte: <textarea name="text[]" rows="3" cols="30"> </textarea><br><br><div class=choix><input type="text" name="choix1[]" value="Choix 1">Numero scene<input type="number" name="direction1[]" min="2"><br><input type="text" name="choix2[]" value="Choix 2">Numero scene<input type="number" name="direction2[]" min="2"><br><input type="text" name="choix3[]" value="Choix 3">Numero scene<input type="number" name="direction3[]" min="2"><br><input type="text" name="choix4[]" value="Choix 4">Numero scene<input type="number" name="direction4[]" min="2"><br><input type="text" name="choix5[]" value="Choix 5">Numero scene<input type="number" name="direction5[]" min="2"></div>Fin?: <input type="checkbox" name="fin[]"><br><br>';
 }
 
 function FIN(){
-	alert("FIN!!!");
+	
 }

@@ -17,7 +17,7 @@ try {
 			$ArraySceneTout = Array();
 			$TitreHist = $rowHist['Titre'];
 			
-			$TabPage = $dbh->prepare('SELECT * FROM page Where Histoire = :Id');
+			$TabPage = $dbh->prepare('SELECT * FROM page Where Histoire = :Id Order By Id');
 			$TabPage->bindParam(':Id', $rowHist['Id'], PDO::PARAM_INT);
 			$TabPage->execute();
 			$resultPage = $TabPage->fetchAll();
@@ -26,7 +26,8 @@ try {
 				foreach($resultPage as $rowPage) {
 					$ArrayChoiceTout = Array();
 			
-					$TabChoix = $dbh->prepare('SELECT * FROM Choix Where IdPageProposition = :Id');
+					$TabChoix = $dbh->prepare('SELECT * FROM Choix Where IdPageProposition = :Id And Histoire = :IdHist');
+					$TabChoix->bindParam(':IdHist', $rowHist['Id'], PDO::PARAM_INT);
 					$TabChoix->bindParam(':Id', $rowPage['Id'], PDO::PARAM_INT);
 					$TabChoix->execute();
 					$resultChoix = $TabChoix->fetchAll();

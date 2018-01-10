@@ -107,3 +107,7 @@ a.Histoire:active {
     bottom: -25px;
     left: 80px;
 }
+
+.invisible{
+	display: none;
+}
